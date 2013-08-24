@@ -7,7 +7,7 @@ set :ruby_version, "2.0.0-p247"
 set :chruby_config, "/usr/local/share/chruby/chruby.sh"
 set :set_ruby_cmd, "source #{chruby_config} && chruby #{ruby_version}"
 set(:bundle_cmd) {
-  "#{set_ruby_cmd} && exec bundle"
+  "#{set_ruby_cmd} && exec bin/bundle"
 }
 
 # Bundler
@@ -20,8 +20,6 @@ set :bundle_flags, "--deployment"
 
 set :scm,         :git
 set :repository,  "git@github.com:oklahoma-atheists/oklahomaatheists.com.git"
-
-ssh_options[:forward_agent] = true
 
 # Config
 
