@@ -48,7 +48,7 @@ set :unicorn_pid,  "#{shared_path}/pids/unicorn.pid"
 namespace :deploy do
   task :start, roles: :app, except: {no_release: true} do
     run "cd #{current_path}; " +
-        "bin/unicorn -c #{unicorn_conf} -D -E #{rack_env}"
+        "#{bundle_cmd} exec unicorn -c #{unicorn_conf} -D -E #{rack_env}"
   end
 
   task :stop, roles: :app, except: {no_release: true} do
@@ -66,5 +66,33 @@ namespace :deploy do
   task :restart, roles: :app, except: {no_release: true} do
     stop
     start
+  end
+
+  namespace :web do
+    task :start, roles: :app, except: {no_release: true} do
+      sudo "service nginx start"
+    end
+
+    task :stop, roles: :app, except: {no_release: true} do
+      sudo "service nginx stop"
+    end
+
+    task :restart, roles: :app, except: {no_release: true} do
+      sudo "service nginx restart"
+    end
+  end
+
+  namespace :db do
+    task :start, roles: :app, except: {no_release: true} do
+      sudo "service postgresql start"
+    end
+
+    task :stop, roles: :app, except: {no_release: true} do
+      sudo "service postgresql stop"
+    end
+
+    task :restart, roles: :app, except: {no_release: true} do
+      sudo "service postgresql restart"
+    end
   end
 end
