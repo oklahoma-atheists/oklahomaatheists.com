@@ -9,7 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require prettyPhoto
+ *= require social
  *= require style
+ *= require skins/red
  *= require bootstrap
  *= require font-awesome
  *= require font-awesome-ie7

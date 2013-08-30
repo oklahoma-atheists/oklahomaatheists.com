@@ -24,5 +24,9 @@ module OklahomaatheistsCom
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # precompile conditional assets
+    config.assets.precompile += %w[ customIE.css nj.css
+                                    html5shiv.js mq.js ie8_fix_maxwidth.js ]
   end
 end
