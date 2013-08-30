@@ -25,8 +25,10 @@ module OklahomaatheistsCom
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # precompile conditional assets
+    # precompile conditional assets, all images, and fonts
     config.assets.precompile += %w[ customIE.css nj.css
-                                    html5shiv.js mq.js ie8_fix_maxwidth.js ]
+                                    html5shiv.js mq.js ie8_fix_maxwidth.js
+                                    *.gif *.jpg *.png
+                                    *.eot *.svg *.ttf *.woff *.otf ]
   end
 end
