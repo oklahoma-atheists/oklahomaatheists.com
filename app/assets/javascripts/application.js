@@ -10,7 +10,17 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require lib-1-9-1
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require modernizr
+//= require easing
+//= require bootstrap
+//= require bxslider
+//= require fitvids
+//= require clearInput
+//= require smooth-scroll
+//= require prettyPhoto
+//= require social
+//= require countdown
+//= require custom
