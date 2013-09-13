@@ -1,0 +1,5 @@
+<div id="socialicons">
+  <% AOK::SOCIAL_MEDIA_ACCOUNTS.each do |account| %>
+    <%= link_to content_tag(:span, " "), account.url, data: {placement: "top"}, rel: "tooltip", title: account.call_to_action, id: "social_#{account.service.downcase}", class: "social_active" %>
+  <% end %>
+</div>
