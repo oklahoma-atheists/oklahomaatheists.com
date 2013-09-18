@@ -2,4 +2,8 @@
 
 We're just getting started here.
 
-We will welcome contributions.  We'll add details about that as soon as the site is up and running.
+You need a <tt>.env</tt> file with login credentials to get the site running.
+You can get a copy from mailto:tech.chair@oklahomaatheists.com when needed.
+
+We will welcome contributions.  We'll add details about that as soon as 
+the site is up and running.

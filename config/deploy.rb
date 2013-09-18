@@ -1,3 +1,7 @@
+# dotenv
+
+require "dotenv/capistrano"
+
 # chruby
 
 default_run_options[:shell] = "/bin/bash"
