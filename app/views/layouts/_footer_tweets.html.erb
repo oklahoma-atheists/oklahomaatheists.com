@@ -1,0 +1,12 @@
+<h4>Latest Twitter <span> Updates </span> <span class="h-line"></span> </h4>
+
+<ul id="tweets_crunchpress">
+  <% @tweets.first(2).each do |tweet| %>
+    <li>
+      <%= tweet.linked_text.html_safe %>
+      <span>&mdash;<%= link_to "#{time_ago_in_words(tweet.time)} ago", tweet.url %></span>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "+ View All #{content_tag(:span, '', class: 'h-line')}".html_safe, AOK::SOCIAL_MEDIA_ACCOUNTS["Twitter"].url, class: "v-a" %>

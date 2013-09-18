@@ -1,0 +1,30 @@
+<div class="accordion" id="accordion_news">
+  <% @events.first(4).each_with_index do |event, i| %>
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle inactive" data-toggle="collapse" data-parent="#accordion_news" href="#event_<%= i %>">
+          <span class="datem span3 first"><%= event.time.strftime("%m/%d") %></span>
+          <span class="title span8"><%= truncate(event.name, length: 25) %>
+            <span class="location_date">
+              <span class="location"><%= icon(:user) %> <%= pluralize(event.attending, "atheist") %></span>
+              <span class="date"><%= icon(:time) %> <%= event.time.strftime("%H:%M %p") %></span>
+            </span>
+          </span>
+          <span class="span1" id="icon_toggle"><%= icon(:plus) %></span>
+        </a>
+      </div>
+
+      <div id="event_<%= i %>" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <figure class="span3 img first">
+            <%= image_tag event.photo_url, alt: "" %>
+          </figure>
+          <figure class="span9">
+            <p>Details are available to our members.</p>
+            <%= link_to "Read more", event.url %>
+          </figure>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

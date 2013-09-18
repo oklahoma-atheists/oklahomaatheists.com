@@ -51,3 +51,12 @@ gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "rmeetup"
+gem "twitter"
+gem "twitter-text"
+gem "faraday"
+gem "simple-rss"
+gem "youtube_it"
+
+gem "dotenv-rails"

@@ -1,0 +1,14 @@
+<h2>AOK <span>Events &amp; Videos</span></h2>
+
+<div class="video_slider_container span8 offset2">
+  <ul class="video_slider">
+    <% @videos.first(3).each do |video| %>
+      <li>
+        <div class="video">
+          <%= raw video.embed_html(width: 376, height: 230) %>
+          <div class="tag_line"><%= truncate(video.name, length: 50) %></div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

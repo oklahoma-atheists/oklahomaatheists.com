@@ -1,5 +1,5 @@
 module AOK
-  SOCIAL_MEDIA_ACCOUNTS = [
+  SOCIAL_MEDIA_ACCOUNTS = Hash[ [
     { service:        "Facebook",
       url:            "https://www.facebook.com/OklahomaAtheists",
       call_to_action: "Join us on Facebook",
@@ -16,5 +16,5 @@ module AOK
       url:            "http://www.youtube.com/user/AtheistOK",
       call_to_action: "Watch Our Broadcasting",
       css_class:      "s7" }
-  ].map { |account| SocialMediaAccount.new(account) }
+  ].map { |account| [account[:service], SocialMediaAccount.new(account)] } ]
 end

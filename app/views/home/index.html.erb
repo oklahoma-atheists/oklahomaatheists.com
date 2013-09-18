@@ -184,103 +184,11 @@
   <section class="container-fluid container">
     <section class="row-fluid">
       <figure class="span6 first" id="video_slider">
-        <h2> Charity <span> Events & Videos </span> </h2>
-
-        <div class="video_slider_container span8 offset2">
-          <ul class="video_slider">
-            <li>
-              <div class="video">
-                <iframe src="http://player.vimeo.com/video/1823335?title=0&amp;byline=0&amp;portrait=0" width="376" height="230" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                <div class="tag_line"> Food & Shelter provided to Katrina Victams </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <%= render "recent_videos" %>
       </figure>
 
       <figure class="span5" id="news_accordion">
-        <div class="accordion" id="accordion_news">
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion_news" href="#co">
-                <span class="datem span3 first"> 05/22 </span>
-                <span class="title span8"> City Marathon 2013
-                  <span class="location_date">
-                    <span class="location">  <i class="icon-map-marker"></i> London </span>
-                    <span class="date">   <i class="icon-time"></i>    May22, 2013   </span>
-                  </span>
-                </span>
-                <span class="span1" id="icon_toggle"> <i class="icon-minus"> </i></span>
-              </a>
-            </div>
-
-            <div id="co" class="accordion-body collapse in">
-              <div class="accordion-inner">
-                <figure class="span3 img first">
-                  <%= image_tag "accordion_img.jpg", alt: "" %>
-                </figure>
-                <figure class="span9">
-                  <p> City Marathon 2013 alorum prompta, mel ea sumo semper nusquam. Soluta intellegebat vim id, vix timeam latine electram at. </p>
-                  <a href="#"> Read More</a>
-                </figure>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle inactive" data-toggle="collapse" data-parent="#accordion_news" href="#c2">
-                <span class="datem span3 first"> 05/27 </span>
-                <span class="title span8"> Kids Fun Gala
-                  <span class="location_date">
-                    <span class="location">  <i class="icon-map-marker"></i> London </span>
-                    <span class="date">   <i class="icon-time"></i>    May 27, 2013   </span>
-                  </span>
-                </span>
-                <span class="span1" id="icon_toggle"> <i class="icon-plus"> </i></span>
-              </a>
-            </div>
-
-            <div id="c2" class="accordion-body collapse">
-              <div class="accordion-inner">
-                <figure class="span3 img first">
-                  <%= image_tag "accordion_img.jpg", alt: "" %>
-                </figure>
-                <figure class="span9">
-                  <p> City Marathon 2013 alorum prompta, mel ea sumo semper nusquam. Soluta intellegebat vim id, vix timeam latine electram at. </p>
-                  <a href="#"> Read More</a>
-                </figure>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle inactive" data-toggle="collapse" data-parent="#accordion_news" href="#c3">
-                <span class="datem span3 first"> 05/29 </span>
-                <span class="title span8"> Family Festival
-                  <span class="location_date">
-                    <span class="location">  <i class="icon-map-marker"></i> London </span>
-                    <span class="date">   <i class="icon-time"></i>    May 29, 2013   </span>
-                  </span>
-                </span>
-                <span class="span1" id="icon_toggle"> <i class="icon-plus"> </i></span>
-              </a>
-            </div>
-
-            <div id="c3" class="accordion-body collapse">
-              <div class="accordion-inner">
-                <figure class="span3 img first">
-                  <%= image_tag "accordion_img.jpg", alt: "" %>
-                </figure>
-                <figure class="span9">
-                  <p> City Marathon 2013 alorum prompta, mel ea sumo semper nusquam. Soluta intellegebat vim id, vix timeam latine electram at. </p>
-                  <a href="#"> Read More</a>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
+        <%= render "upcoming_events" %>
       </figure>
     </section>
   </section>
@@ -317,28 +225,7 @@
       </figure>
 
       <figure id="shop" class="span6">
-        <h2 class="title"> Charity Store
-          <span class="h-line"></span>
-        </h2>
-
-        <div id="slider_shop">
-          <ul id="shop_slider">
-            <li>
-              <div class="img"><%= image_tag "shop_img_1.jpg", alt: "Shop Image" %></div>
-              <div class="price_cart"> <span class="price">$14.90 </span> <a href="#"  data-placement="top" rel="tooltip" title="Add to Cart" > <i class="icon-shopping-cart" > </i> </a> </div>
-            </li>
-
-            <li>
-              <div class="img"><%= image_tag "shop_img_2.jpg", alt: "Shop Image" %></div>
-              <div class="price_cart"> <span class="price">$14.90 </span>  <a href="#" data-placement="top" rel="tooltip" title="Add to Cart"> <i class="icon-shopping-cart"></i> </a> </div>
-            </li>
-
-            <li>
-              <div class="img"><%= image_tag "shop_img_3.jpg", alt: "Shop Image" %></div>
-              <div class="price_cart"> <span class="price">$14.90 </span>  <a href="#" data-placement="top" rel="tooltip" title="Add to Cart"> <i class="icon-shopping-cart"></i> </a> </div>
-            </li>
-          </ul>
-        </div>
+        <%= render "products" %>
       </figure>
     </section>
   </section>

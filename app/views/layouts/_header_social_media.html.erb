@@ -1,5 +1,5 @@
 <ul class="social">
-  <% AOK::SOCIAL_MEDIA_ACCOUNTS.reverse_each do |account| %>
+  <% AOK::SOCIAL_MEDIA_ACCOUNTS.values.reverse_each do |account| %>
     <li><%= link_to account.service, account.url, class: account.css_class %></li>
   <% end %>
 </ul>
