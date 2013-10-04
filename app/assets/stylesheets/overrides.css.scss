@@ -9,9 +9,38 @@
     }
 }
 
-#footer .footer_2 {
-    a:link, a:visited, a:hover, a:active {
-        color:           #FFFFFF;
-        text-decoration: none;
+.logo_container {
+    padding: 0px;
+    .container {
+        width: 100%;
+        #logo {
+            margin: 0px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#footer {
+    .footer_1 {
+        #banner {
+            a {
+                color: #B82727;
+            }
+        }
+    }
+
+    .footer_2 {
+        a:link, a:visited, a:hover, a:active {
+            color:           #FFFFFF;
+            text-decoration: none;
+        }
+    }
+
+    .footer_3 {
+        #tweets.latest_tweets {
+            background-image: none;
+        }
     }
 }

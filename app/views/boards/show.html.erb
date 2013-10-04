@@ -1,0 +1,54 @@
+<section class="mtop">
+  <section class="container-fluid container">
+    <section class="row-fluid">
+      <section id="donation_box">
+        <section class="container container-fluid">
+          <section class="row-fluid">
+            <figure class="span12">
+              <h2>The Board of Directors</h2>
+            </figure>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="row-fluid">
+      <figure id="breadcrumbs" class="span12">
+        <ul class="breadcrumb">
+          <li><%= link_to "Home", root_path %> <span class="divider">/</span></li>
+          <li class="active">The Board</li>
+        </ul>
+      </figure>
+    </section>
+  </section>
+</section>
+
+<section id="content" class="mbtm team">
+  <section class="container-fluid container">
+    <section class="row-fluid">
+      <% board_members.each do |group, members| %>
+        <section class="team_holder span12 first">
+          <h3><%= icon :ok_circle %> <%= group %></h3>
+
+          <% members.each_with_index do |member, i| %>
+            <figure class="team_member span3<%= raw ' first' if i.zero? %>">
+              <div class="member_img">
+                <%= headshot(member) %>
+              </div>
+              <div class="team_member_description">
+                <h5><%= member.name %></h5>
+                <span class="mem_desig"><%= member.position %></span>
+
+                <figure id="n_social">
+                  <%= link_to_social_media(:facebook,    member) %>
+                  <%= link_to_social_media(:twitter,     member) %>
+                  <%= link_to_social_media(:google_plus, member) %>
+                </figure>
+              </div>
+            </figure>
+          <% end %>
+        </section>
+        <% end %>
+    </section>
+  </section>
+</section>

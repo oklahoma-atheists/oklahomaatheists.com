@@ -1,3 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.feature {
+    .ftr_img {
+        padding: 0px;
+
+        .img {
+            width:  270px;
+            height: 140px;
+        }
+    }
+
+    .f-img-1 .img {
+        background-image: image-url("community.png");
+    }
+
+    .f-img-2 .img {
+        background-image: image-url("education.png");
+    }
+
+    .f-img-3 .img {
+        background-image: image-url("volunteering.png");
+    }
+
+    .f-img-4 .img {
+        background-image: image-url("activism.png");
+    }
+}
+
+.feature:hover .f-img-1 .img, .feature.active .f-img-1 .img{
+    background-image: image-url("community.png");
+}
+
+.feature:hover .f-img-2 .img, .feature.active .f-img-2 .img{
+    background-image: image-url("education.png");
+}
+
+.feature:hover .f-img-3 .img, .feature.active .f-img-3 .img{
+    background-image: image-url("volunteering.png");
+}
+
+.feature:hover .f-img-4 .img, .feature.active .f-img-4 .img{
+    background-image: image-url("activism.png");
+}

@@ -41,36 +41,21 @@
                 <%= render "layouts/header_social_media" %>
               </article>
             </section>
-          </section>  
+          </section>
         </section>
 
         <section class="logo_container">
           <section class="container-fluid container">
             <section class="row-fluid">
-              <section class="span4">
+              <section class="span12">
                 <h1 id="logo">
                   <%= link_to image_tag("logo.png"), root_path %>
                 </h1>
               </section>
-            
-              <section class="span5 pull-right">
-                <figure class="charity_counter_wrapper">
-                  <section class="span5">
-                    <div class="charity_title">
-                      Charity <br /> Marathon 2013
-                    </div>
-                  </section>
-                  <section class="span1 event_more pull-right"> <a href="event_detail.html"  data-placement="bottom" rel="tooltip" title="View Event Detail" > <i class="icon">+</i>  </a> </section>
-                  <section class="span6 counter_bg pull-right">
-                    <div id="countdown162" class="tCountdOwn">
-                    </div>
-                  </section>
-                </figure>
-              </section>
             </section>
           </section>
         </section>
-  
+
         <nav id="nav">
           <section class="container-fluid container">
             <section class="row-fluid">
@@ -78,68 +63,10 @@
                 <div class="navbar-inner">
                   <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                   <div class="nav-collapse collapse">
-                    <ul class="nav">
-                      <li class="active"> <a href="index.html"> Home </a> </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="about-us.html">  About<b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="team.html"> Organizers</a></li>
-                          <li><a href="career.html">Careers</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="event_listing.html"> Charity Events  <b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="event_detail.html">Event Detail</a></li>
-                          <li><a href="event_calander.html">Event Calander</a></li>
-                          <li><a href="event_venue.html">Event Venue</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="crowdfunding_listing.html" >  Projects  <b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="crowdfunding_listing.html">Project Listing</a></li>
-                          <li><a href="crowdfunding_detail.html">Project Detail</a></li>
-                          <li><a href="crowdfunding_payment.html">Project Payment </a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="product_listing_list.html" >  Charity Store <b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="product_listing_grid.html">Store Grid View</a></li>
-                          <li><a href="product_listing_list.html">Store List View</a></li>
-                          <li><a href="product_detail.html">Product Detail</a></li>
-                          <li><a href="cart.html">Cart Page</a></li>
-                          <li><a href="checkout.html">Checkout Page</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="blog.html" >  Blog <b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="blog.html">Blog Listing</a></li>
-                          <li><a href="blog_detail.html">Single Post</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="gallery_1_col.html" >  Gallery <b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li>  <a href="gallery_1_col.html">Single Column      </a></li>
-                          <li>  <a href="gallery_2_col.html">  Two Column    </a></li>
-                          <li>  <a href="gallery_3_col.html">  Three Column  </a></li>
-                          <li>  <a href="gallery_4_col.html">  Four Column    </a></li>
-                          <li>  <a href="gallery_detail.html">  Gallery Detail    </a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"> <a class="dropdown-toggle" href="#" >  Pages <b class="caret"></b> </a>
-                        <ul class="dropdown-menu">
-                          <li><a href="faqs.html">Frequently Asked Questions </a></li>
-                          <li><a href="404.html">404 Page </a></li>
-                          <li><a href="search.html">Search Page </a></li>
-                          <li><a href="sitemap.html">Sitemap </a></li>
-                          <li><a href="shortcodes.html">ShortCodes </a></li>
-                        </ul>
-                      </li>
-                      <li> <a href="contact_us.html"> Contact </a> </li>
-                    </ul>
+                    <%= render "layouts/header_nav_links" %>
                   </div>
                 </div>
               </div>
-
-              <div class="nav_search pull-right"> <form method="post" actoion="#"> <input type="text" value="Search Here..." name="s" id="s" /> <button><i class="icon-search"></i> </button></form></div>
             </section>
           </section>
         </nav>
@@ -151,20 +78,14 @@
         <section class="footer_1">
           <section class="container-fluid container">
             <section class="row-fluid">
-              <section id="banner" class="span12 first"> 
-                <div class="inner"> 
-                  <div class="span9">
-                    <h2> Free shipping on all orders over $75 </h2>
-                    <h3> * FREE OVER $125 for international orders </h3>
-                  </div>
-                  <div class="pull-left span3">
-                    <div id="banner_rounded" class="img-circle">
-                      <h3>  DELIVERED TO YOUR DOOR IN <span> 3 days </span> </h3>
-                    </div>
+              <section id="banner" class="span12 first">
+                <div class="inner">
+                  <div class="span12">
+                    <%= render "layouts/footer_join_banner" %>
                   </div>
                 </div>
               </section>
-        
+
               <section class="span12 first" id="footer_main">
                 <section class="span3 first widget">
                   <h4>GET IN <span> Touch </span> <span class="h-line"></span> </h4>
@@ -278,7 +199,7 @@
             </section>
           </section>
         </section>
-  
+
         <section class="footer_2">
           <section class="container-fluid container">
             <section class="row-fluid">
@@ -290,27 +211,19 @@
             </section>
           </section>
         </section>
-  
+
         <section class="footer_3">
           <section class="container-fluid container">
             <section class="row-fluid">
               <figure class="span6" id="footer_left">
-                <ul class="footer_nav"> 
-                  <li> <a href="index.html">  Home     </a> </li>
-                  <li> <a href="shortcodes.html">   Features  </a> </li>
-                  <li> <a href="blog.html">   Blog     </a> </li>
-                  <li> <a href="shortcodes.html">   Portfolio  </a> </li>
-                  <li> <a href="contact_us.html">   Contact    </a> </li>
-                </ul>
+                <%= render "layouts/footer_nav_links" %>
 
                 <p>Copyright © <%= Time.now.year %> &ndash; Oklahoma Atheists</p>
               </figure>
-      
+
               <figure class="span6" id="footer_right">
                 <div id="tweets" class="latest_tweets">
-                  <ul id="latest_tweets">
-                    <li> Have a look at new theme of crunchpress at <a href="http://www.themeforest.net/user/crunchpress"> http://bit.ly/ju89ytg </a> - we've added new great stuff and refreshed the theme!</li>
-                  </ul>
+                  <%= render "layouts/footer_quotes" %>
                 </div>
               </figure>
             </section>
