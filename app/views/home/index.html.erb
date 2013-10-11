@@ -77,30 +77,7 @@
   <section class="container-fluid container">
     <section class="row-fluid">
       <figure id="blog" class="span6 first">
-        <h2 class="title"> from our blog
-          <span class="h-line"></span>
-        </h2>
-
-        <div id="slider_blog">
-          <ul id="blog_slider">
-            <li>
-              <div class="img span5"><%= image_tag "blog_img.jpg", alt: "" %></div>
-
-              <div class="content span7">
-                <div class="icon_date">
-                  <i class="icon-picture" ></i>
-                  <span class="date" > May 15, 2013 </span>
-                </div>
-
-                <div class="post_excerpt">
-                  <h4> <a href="#"> Donate for Charity Event </a> </h4>
-                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                  <a href="#"> Read More <i class="icon-plus"></i> </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <%= render "recent_blog_posts" %>
       </figure>
 
       <figure id="shop" class="span6">

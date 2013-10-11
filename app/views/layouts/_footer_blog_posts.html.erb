@@ -1,0 +1,9 @@
+<h4>Recent Blog <span>Posts</span><span class="h-line"></span></h4>
+
+<ul id="popular_post">
+  <% BlogPost.recent.each do |post| %>
+    <li><p><%= link_to truncate(post.title, length: 50), post.url %></p></li>
+  <% end %>
+</ul>
+
+<%= link_to %Q{+ View All <span class="h-line"></span>}.html_safe, AOK::APIs.blogger.blog_url, class: "v-a" %>

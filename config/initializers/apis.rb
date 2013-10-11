@@ -32,5 +32,9 @@ module AOK
     def zazzle
       @zazzle ||= Zazzle.new(ENV.fetch("ZAZZLE_USERNAME"))
     end
+
+    def blogger
+      @blogger ||= Blogger.new(ENV.fetch("BLOGGER_BLOG_URL"))
+    end
   end
 end

@@ -1,0 +1,24 @@
+<h2 class="title">
+  from our blog
+  <span class="h-line"></span>
+</h2>
+
+<div id="slider_blog">
+  <ul id="blog_slider">
+    <% BlogPost.recent.each do |post| %>
+      <li>
+        <div class="content span12">
+          <div class="icon_date">
+            <span class="date"><%= post.time.to_date.to_s(:long_ordinal) %></span>
+          </div>
+
+          <div class="post_excerpt">
+            <h4><%= link_to post.title, post.url %></h4>
+            <p><%= truncate(post.summary, length: 250) %></p>
+            <%= link_to "Read More #{icon(:plus)}".html_safe, post.url %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

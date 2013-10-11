@@ -1,1 +1,2 @@
+require "blogger"
 require "zazzle"
