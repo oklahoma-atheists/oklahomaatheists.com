@@ -108,4 +108,21 @@ namespace :deploy do
       sudo "service postgresql restart"
     end
   end
+
+  namespace :cache do
+    desc "Start memcached"
+    task :start, roles: :app, except: {no_release: true} do
+      sudo "service memcached start"
+    end
+
+    desc "Stop memcached"
+    task :stop, roles: :app, except: {no_release: true} do
+      sudo "service memcached stop"
+    end
+
+    desc "Restart memcached"
+    task :restart, roles: :app, except: {no_release: true} do
+      sudo "service memcached restart"
+    end
+  end
 end

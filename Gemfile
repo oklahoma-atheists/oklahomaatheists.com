@@ -32,6 +32,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem "foreman"
+end
+
 group :development, :test do
   gem "rspec-rails"
   gem "factory_girl_rails"
@@ -52,11 +56,14 @@ gem 'capistrano', group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "dalli"
+
+gem "faraday"
+gem "simple-rss"
+
 gem "rmeetup"
 gem "twitter"
 gem "twitter-text"
-gem "faraday"
-gem "simple-rss"
 gem "youtube_it"
 
 gem "dotenv-rails"

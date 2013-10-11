@@ -7,9 +7,14 @@ class ExternalResourceLoader
   attr_reader :context, :threads
   private     :context, :threads
 
-  def start_loading(var_name, &loader)
+  def start_loading(var_name, expires = 6.hours, &loader)
     threads << Thread.new do
-      context.instance_variable_set("@#{var_name}", loader.call)
+      context.instance_variable_set(
+        "@#{var_name}",
+        Rails.cache.fetch( "external_data/#{var_name}",
+                           expires_in: expires,
+                           &loader )
+      )
     end
   end
 
