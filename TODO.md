@@ -6,3 +6,4 @@ To Do
 * Clarify licensing of code and content
 * Introduce a loaded for the parallel threaded pulling of external resources with caching
 * Test the external resource wrappers
+* Setup email (Mandrill?  http://www.mandrill.com/?utm_campaign=10/10&utm_medium=email&utm_source=rubyweekly&utm_content=ruby-weekly)
