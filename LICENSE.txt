@@ -1,0 +1,11 @@
+LICENSE
+=======
+
+The code for the Oklahoma Atheists Site is distributed under the MIT License,
+distributed with the source in MIT_LICENSE.txt.
+
+Any content distributed with this code, our copy, images, etc., is distributed
+under the Creative Commons Attribution-NonCommercial 3.0 license.  You can read
+that license at:
+
+http://creativecommons.org/licenses/by-nc/3.0/
