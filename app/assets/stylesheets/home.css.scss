@@ -29,22 +29,6 @@
     }
 }
 
-.feature:hover .f-img-1 .img, .feature.active .f-img-1 .img{
-    background-image: image-url("community.png");
-}
-
-.feature:hover .f-img-2 .img, .feature.active .f-img-2 .img{
-    background-image: image-url("education.png");
-}
-
-.feature:hover .f-img-3 .img, .feature.active .f-img-3 .img{
-    background-image: image-url("volunteering.png");
-}
-
-.feature:hover .f-img-4 .img, .feature.active .f-img-4 .img{
-    background-image: image-url("activism.png");
-}
-
 #events_videos h2 span {
   color: #474747;
 }
