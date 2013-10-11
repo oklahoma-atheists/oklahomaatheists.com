@@ -5,9 +5,19 @@ class ApplicationController < ActionController::Base
 
   before_filter :load_social_media
 
+  def render(*)
+    loader.finish_loading
+    super
+  end
+
   private
 
+  def loader
+    @loader ||= ExternalResourceLoader.new(self)
+  end
+
   def load_social_media
-    @tweets = Tweet.recent
+    loader.start_loading(:tweets)     { Tweet.recent    }
+    loader.start_loading(:blog_posts) { BlogPost.recent }
   end
 end

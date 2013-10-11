@@ -1,5 +1,5 @@
 class BlogPost
-  def self.all
+  def self.recent
     posts = AOK::APIs.blogger.posts
     Array(posts).map { |post|
       new( title:   post.title,
@@ -7,10 +7,6 @@ class BlogPost
            url:     post.url,
            time:    post.time )
     }
-  end
-
-  def self.recent
-    all.first(4)
   end
 
   def initialize(details)

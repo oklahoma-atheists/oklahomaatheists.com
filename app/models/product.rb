@@ -9,8 +9,8 @@ class Product
     }
   end
 
-  def self.random(count)
-    all.group_by(&:name).values.sample(count).map(&:sample).shuffle
+  def self.random(count, products = all)
+    products.group_by(&:name).values.sample(count).map(&:sample).shuffle
   end
 
   def initialize(details)

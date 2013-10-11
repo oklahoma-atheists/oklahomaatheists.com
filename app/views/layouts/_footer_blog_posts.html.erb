@@ -1,7 +1,7 @@
 <h4>Recent Blog <span>Posts</span><span class="h-line"></span></h4>
 
 <ul id="popular_post">
-  <% BlogPost.recent.each do |post| %>
+  <% @blog_posts.first(4).each do |post| %>
     <li><p><%= link_to truncate(post.title, length: 50), post.url %></p></li>
   <% end %>
 </ul>
