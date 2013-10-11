@@ -1,0 +1,9 @@
+<h4>Friends of the <span>AOK</span><span class="h-line"></span></h4>
+
+<ul id="popular_post">
+  <% friends.each do |friend| %>
+    <li><p><%= link_to friend.name.gsub("\n", "<br>").html_safe, friend.url %></p></li>
+  <% end %>
+</ul>
+
+<a class="v-a"><span class="h-line"></span></a>

@@ -23,6 +23,26 @@ module ApplicationHelper
     }
   end
 
+  def friends
+    [ FriendlyGroup.new( name: "Atheist Community of Tulsa",
+                         url:  "http://actok.org/" ),
+      FriendlyGroup.new( name: "Camp Quest Oklahoma",
+                         url:  "http://campquestoklahoma.org/" ),
+      FriendlyGroup.new( name: "FreeOK",
+                         url:  "http://freeok.org/" ),
+      FriendlyGroup.new( name: "Lawton Area Secular Society",
+                         url:  "http://www.meetup.com/" +
+                               "Lawton-Area-Secular-Society/" ),
+      FriendlyGroup.new( name: "Norman Naturalism Group",
+                         url:  "http://www.meetup.com/naturalism-6/" ),
+      FriendlyGroup.new( name: "OKC Secular Parenting Group",
+                         url:  "http://www.meetup.com/" +
+                               "OKC-Secular-Parenting-Group/" ),
+      FriendlyGroup.new( name: "Tinker Military Association of\n" +
+                               "Atheists and Freethinkers",
+                         url:  "http://www.meetup.com/tinkermaaf/" ) ]
+  end
+
   def quotes
     [ Quote.new( comment: "I contend that we are both atheists.  " +
                           "I just believe in one fewer god than you do.",
