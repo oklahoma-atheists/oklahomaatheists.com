@@ -24,3 +24,4 @@
 //= require social
 //= require countdown
 //= require custom
+//= require contacts

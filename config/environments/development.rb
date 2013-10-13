@@ -17,7 +17,18 @@ OklahomaatheistsCom::Application.configure do
   config.cache_store = :dalli_store
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  # Email settings:
+  config.action_mailer.smtp_settings = {
+    address:              "smtp.mandrillapp.com",
+    port:                 587,
+    enable_starttls_auto: true,
+    user_name:            ENV.fetch("MANDRILL_USERNAME"),
+    password:             ENV.fetch("MANDRILL_API_KEY"),
+    authentication:       "login",
+    domain:               ENV.fetch("MANDRILL_DOMAIN")
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
