@@ -1,5 +1,5 @@
 <h2 class="title">
-  The AOK Store
+  <%= link_to "The AOK Store", AOK::APIs.zazzle.store_url %>
   <span class="h-line"></span>
 </h2>
 
@@ -7,9 +7,9 @@
   <ul id="shop_slider">
     <% Product.random(9, @products).each do |product| %>
       <li>
-        <div class="img"><%= image_tag product.photo_url, alt: product.name.html_safe %></div>
+        <div class="img"><%= link_to image_tag(product.photo_url, alt: product.name.html_safe), product.url %></div>
         <div class="price_cart">
-          <span class="price"><%= product.price %></span>
+          <span class="price"><%= link_to product.price, product.url %></span>
           <%= link_to icon(:shopping_cart), product.url, data: {placement: "top"}, rel: "tooltip", title: "View this item on Zazzle" %>
         </div>
       </li>

@@ -33,8 +33,25 @@
   color: #474747;
 }
 
-#shop_slider img {
-    width:        116px;
-    height:       116px;
-    padding-left: 11px;
+#shop {
+    .title {
+        a {
+            color: #474747;
+        }
+    }
+
+    #shop_slider {
+        img {
+            width:        116px;
+            height:       116px;
+            padding-left: 11px;
+        }
+
+        .price_cart .price a {
+            display: inline;
+            float:   none;
+
+            color: #333333;
+        }
+    }
 }

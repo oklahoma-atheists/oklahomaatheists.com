@@ -1,11 +1,18 @@
 class Zazzle
   Product = Struct.new(:title, :price, :link, :thumbnail_url)
 
+  BASE_URL = "http://www.zazzle.com"
+
   def initialize(store_url_name)
     @store_url_name = store_url_name
   end
 
   attr_reader :store_url_name
+  private     :store_url_name
+
+  def store_url
+    "#{BASE_URL}/#{store_url_name}"
+  end
 
   def products
     Array(feed.items).map { |item| parse_product(item) }
@@ -14,7 +21,7 @@ class Zazzle
   private
 
   def connection
-    Faraday.new(url: "http://www.zazzle.com")
+    Faraday.new(url: BASE_URL)
   end
 
   def feed
