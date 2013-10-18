@@ -33,13 +33,15 @@
   color: #474747;
 }
 
-#shop {
+#blog, #shop {
     .title {
         a {
             color: #474747;
         }
     }
+}
 
+#shop {
     #shop_slider {
         img {
             width:        116px;
