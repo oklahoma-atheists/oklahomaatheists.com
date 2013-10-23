@@ -25,7 +25,7 @@ set :repository,  "git@github.com:oklahoma-atheists/oklahomaatheists.com.git"
 
 # Config
 
-set :application, "beta.oklahomaatheists.com"
+set :application, "oklahomaatheists.com"
 set :domain,      application
 
 # Environment
