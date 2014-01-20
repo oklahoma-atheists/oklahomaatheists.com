@@ -3,7 +3,8 @@ class ContactMailer < ActionMailer::Base
     @message = message
 
     mail to:       AOK::EMAIL,
-         from:     "#{name} <#{email}>",
+         from:     "tech.chair@oklahomaatheists.com",
+         reply_to: "#{name} <#{email}>",
          subject:  "A Comment From the AOK Site"
   end
 end
