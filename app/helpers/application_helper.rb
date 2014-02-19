@@ -1,4 +1,6 @@
 module ApplicationHelper
+  HTML_ENTITIES_DECODER = HTMLEntities.new
+
   def icon(name)
     content_tag(:i, " ", class: "icon-#{name.to_s.tr('_', '-')}")
   end
@@ -59,5 +61,9 @@ module ApplicationHelper
                           "effectually on sympathy, education, " +
                           "and social ties; no religious basis is necessary.",
                  by:      "Albert Einstein" ) ]
+  end
+
+  def html_unescape(text)
+    HTML_ENTITIES_DECODER.decode(text)
   end
 end

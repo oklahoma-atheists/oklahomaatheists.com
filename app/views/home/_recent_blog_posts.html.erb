@@ -14,7 +14,7 @@
 
           <div class="post_excerpt">
             <h4><%= link_to post.title, post.url %></h4>
-            <p><%= truncate(post.summary, length: 250) %></p>
+            <p><%= truncate(html_unescape(post.summary), length: 250) %></p>
             <%= link_to "Read More #{icon(:plus)}".html_safe, post.url %>
           </div>
         </div>

@@ -60,6 +60,7 @@ gem "dalli"
 
 gem "faraday"
 gem "simple-rss"
+gem "htmlentities"
 
 gem "rmeetup"
 gem "twitter"

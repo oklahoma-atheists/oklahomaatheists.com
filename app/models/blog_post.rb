@@ -10,9 +10,9 @@ class BlogPost
   end
 
   def initialize(details)
-    @title   = details.fetch(:title)
-    @summary = details.fetch(:summary)
-    @url     = details.fetch(:url)
+    @title   = details.fetch(:title).force_encoding("UTF-8")
+    @summary = details.fetch(:summary).force_encoding("UTF-8")
+    @url     = details.fetch(:url).force_encoding("UTF-8")
     @time    = details.fetch(:time)
   end
 
