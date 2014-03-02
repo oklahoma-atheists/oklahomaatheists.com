@@ -68,3 +68,6 @@ gem "twitter-text"
 gem "youtube_it"
 
 gem "dotenv-rails"
+
+# for bill_watch
+gem "pony"
