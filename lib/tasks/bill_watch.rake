@@ -152,8 +152,7 @@ end
 
 desc "Watches bills in the OK House"
 task :bill_watch do
-  subscriber          = "james@graysoftinc.com"
-  # subscriber          = "5803092033@txt.att.net"
+  subscriber          = "5803092033@txt.att.net"
   subscribed_to_bills = %w[HB1674]
 
   agenda = Agenda.new
@@ -168,10 +167,10 @@ task :bill_watch do
                             measures[0..-2].join(", ") + ", and #{measures[-1]}"
                           end
       notification = Notification.new(
-                                      to:      subscriber,
-                                      subject: "Measures Added to the OK House Agenda",
-                                      message: "#{measures_sentence}."
-                                      )
+        to:      subscriber,
+        subject: "Measures Added to the OK House Agenda",
+        message: "#{measures_sentence}."
+      )
       notification.deliver
       agenda.save
     end
@@ -184,11 +183,11 @@ task :bill_watch do
     if tracker.bill_history?
       if tracker.has_changes?
         notification = Notification.new(
-                                        to:      subscriber,
-                                        subject: "Changes for #{bill}",
-                                        message: tracker.updates.map { |line| "#{line}\n" }.join +
-                                        tracker.build_url_for_bill
-                                        )
+          to:      subscriber,
+          subject: "Changes for #{bill}",
+          message: tracker.updates.map { |line| "#{line}\n" }.join +
+                   tracker.build_url_for_bill
+        )
         notification.deliver
         tracker.save
       end
