@@ -12,6 +12,8 @@ class Event
            url:       event.event_url,
            photo_url: event.photo_url )
     }
+  rescue JSON::ParserError
+    [ ]
   end
 
   def initialize(details)
