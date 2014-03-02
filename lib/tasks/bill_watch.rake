@@ -22,7 +22,7 @@ class Notification
     }
   end
 
-  def initialize(to: , subject: , message: )
+  def initialize(to: nil, subject: nil, message: nil)
     @to      = to
     @subject = subject
     @message = message
