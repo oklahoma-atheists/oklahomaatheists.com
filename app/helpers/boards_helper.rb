@@ -7,59 +7,58 @@ module BoardsHelper
            facebook: "https://www.facebook.com/red.mccall"
          ),
          BoardMember.new(
-           name:     "Paul Dawson",
+           name:     "Lindsey Box",
            position: "Vice President",
-           facebook: "https://www.facebook.com/paul.dawson.180"
+           facebook: "https://www.facebook.com/lindseybox"
          ),
          BoardMember.new(
-           name:     "Casey Wilmot",
+           name:     "Michelle Ellis",
            position: "Secretary",
-           facebook: "https://www.facebook.com/Mixato"
+           facebook: "https://www.facebook.com/michellis7780"
          ),
          BoardMember.new(
-           name:     "EJ Klapperich",
+           name:     "David Spitzer",
            position: "Treasurer",
-           facebook: "https://www.facebook.com/ejklapperichjr"
+           facebook: "https://www.facebook.com/dwspitzer"
          )
        ],
       "Chairs"     => [
          BoardMember.new(
-           name:     "Chas Stewart",
+           name:     "Nick Singer",
            position: "Activism Chair",
-           facebook: "https://www.facebook.com/chas.stewart"
+           facebook: "https://www.facebook.com/nasinger"
          ),
          BoardMember.new(
-           name:     "Clayton Flesher",
+           name:     "Chris Garneau",
            position: "Education Chair",
-           facebook: "https://www.facebook.com/clayton.flesher"
+           facebook: "https://www.facebook.com/chris.g22.2"
          ),
          BoardMember.new(
-           name:     "Michelle Ellis",
+           name:     "Abe Haynes",
            position: "Outreach Coordinator",
-           facebook: "https://www.facebook.com/michellis7780"
+           facebook: "https://www.facebook.com/abe.haynes"
          ),
          BoardMember.new(
-           name:     "James Edward Gray II",
+           name:     "Chris Hollis",
            position: "Technology Chair",
-           facebook: "https://www.facebook.com/james.gray.9022662",
-           twitter:  "https://twitter.com/JEG2"
+           facebook: "https://www.facebook.com/cdhollis"
          )
       ],
       "Volunteers" => [
          BoardMember.new(
-           name:     "Lindsey Box",
+           name:     "Kate Fulghum",
            position: "Volunteer",
-           facebook: "https://www.facebook.com/lindseybox"
+           facebook: "https://www.facebook.com/kmfulghum"
          ),
          BoardMember.new(
-           name:     "Eric Levine",
+           name:     "Kristi Rowley",
            position: "Volunteer",
-           facebook: "https://www.facebook.com/ericplvn"
+           facebook: "https://www.facebook.com/kristi.rowley.16"
          ),
          BoardMember.new(
-           name:     "Lennon Patton",
+           name:     "Marion Dilbeck",
            position: "Volunteer",
-           facebook: "https://www.facebook.com/lennon.patton"
+           facebook: "https://www.facebook.com/john.mergendeiler"
          )
       ] }
   end
