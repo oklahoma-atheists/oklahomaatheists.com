@@ -3,4 +3,6 @@ OklahomaatheistsCom::Application.routes.draw do
 
   resource :board
   resource :contact
+
+  get "/redirect" => "domains#show"
 end

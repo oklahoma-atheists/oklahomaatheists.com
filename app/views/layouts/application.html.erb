@@ -28,6 +28,8 @@
     <!--[if IE 8]>
       <%= javascript_include_tag :ie8_fix_maxwidth %>
     <![endif]-->
+
+    <%= yield(:head) %>
   </head>
   <body>
     <div class="wrapper">
