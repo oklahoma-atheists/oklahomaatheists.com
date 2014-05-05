@@ -5,6 +5,9 @@
 <%= form_tag(contact_path, id: "contact_form") do %>
   <%= text_field_tag :name,    "", placeholder: "Name",     required: "required" %>
   <%= text_field_tag :email,   "", placeholder: "Email",    required: "required" %>
+  <div class="special-alignment">
+    <%= text_field_tag :subject, "", placeholder: "Subject" %>
+  </div>
   <%= text_area_tag  :message, "", placeholder: "Comments", required: "required", rows: 5, cols: 20 %>
   <%= submit_tag "Send Message" %>
 <% end %>

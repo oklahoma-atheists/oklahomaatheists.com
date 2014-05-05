@@ -1,8 +1,10 @@
 class ContactsController < ApplicationController
   def create
-    ContactMailer.get_in_touch( params[:name],
-                                params[:email],
-                                params[:message] ).deliver
+    unless params[:subject] =~ /\S/
+      ContactMailer.get_in_touch( params[:name],
+                                  params[:email],
+                                  params[:message] ).deliver
+    end
     render nothing: true
   end
 end
