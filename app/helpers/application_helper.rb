@@ -42,7 +42,9 @@ module ApplicationHelper
                                "OKC-Secular-Parenting-Group/" ),
       FriendlyGroup.new( name: "Tinker Military Association of\n" +
                                "Atheists and Freethinkers",
-                         url:  "http://www.meetup.com/tinkermaaf/" ) ]
+                         url:  "http://www.meetup.com/tinkermaaf/" ),
+      FriendlyGroup.new( name: "Agnostics Atheists and Freethinkers Club at OCCC",
+                         url:  "http://facebook.com/aafatoccc" ) ]
   end
 
   def quotes
