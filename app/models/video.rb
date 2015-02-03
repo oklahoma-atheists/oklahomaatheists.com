@@ -1,8 +1,5 @@
 class Video
   def self.recent
-    return [ ]
-
-    AOK::APIs.youtube.refresh_access_token!
     videos = AOK::APIs.youtube
                       .videos_by(user: ENV.fetch("YOUTUBE_USERNAME"))
                       .videos

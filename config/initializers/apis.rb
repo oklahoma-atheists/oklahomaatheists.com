@@ -20,13 +20,7 @@ module AOK
     end
 
     def youtube
-      @youtube ||= YouTubeIt::OAuth2Client.new(
-        client_access_token:  ENV.fetch("YOUTUBE_CLIENT_ACCESS_TOKEN"),
-        client_refresh_token: ENV.fetch("YOUTUBE_CLIENT_REFRESH_TOKEN"),
-        client_id:            ENV.fetch("YOUTUBE_CLIENT_ID"),
-        client_secret:        ENV.fetch("YOUTUBE_CLIENT_SECRET"),
-        dev_key:              ENV.fetch("YOUTUBE_DEV_KEY")
-      )
+      @youtube ||= YouTubeIt::Client.new(dev_key: ENV.fetch("YOUTUBE_DEV_KEY"))
     end
 
     def zazzle
