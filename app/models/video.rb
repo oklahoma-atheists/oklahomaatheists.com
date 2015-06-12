@@ -11,6 +11,8 @@ class Video
                                height: "**PLACEHOLDER_HEIGHT**"
                              ) )
     }
+  rescue OpenURI::HTTPError
+    [ ]
   end
 
   def initialize(details)
